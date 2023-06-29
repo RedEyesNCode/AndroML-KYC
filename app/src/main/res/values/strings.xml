@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AndroKYC</string>
+
+    <string name="GOOGLE_API_SET_KEY_ML">"smple</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

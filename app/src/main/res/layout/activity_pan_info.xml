@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".activity.PanInfoActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/appBar"
+        android:background="@drawable/app_bar_background"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/_2sdp"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageView"
+            android:layout_width="@dimen/_75sdp"
+            android:layout_centerVertical="true"
+            android:layout_height="@dimen/_75sdp"
+            android:src="@drawable/ic_girl_git"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <!-- TextView aligned to the end of the circle ImageView -->
+        <TextView
+            android:id="@+id/endTextView"
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/source_code_bold"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="@dimen/_15sdp"
+            android:layout_below="@id/circleImageView"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/_4sdp"
+            android:layout_marginStart="16dp"
+            android:gravity="center" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/_8sdp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextPanHolderName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Pan Card Holder Name" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextPanNumber"
+                android:textAllCaps="true"
+                android:maxLength="10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="PAN Number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextDateOfBirth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Date of Birth"
+                android:clickable="false"
+                android:focusable="false" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_above="@id/viewPager"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/_7sdp"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/source_code_bold"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/btnUploadPan"
+            android:textSize="@dimen/_16sdp"
+            android:textColor="@color/white"
+            android:padding="@dimen/_6sdp"
+            android:background="@android:color/holo_green_light"
+            android:layout_height="wrap_content"
+            android:text="Upload Pan Card" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

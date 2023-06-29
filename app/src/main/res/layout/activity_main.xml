@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="@dimen/_90sdp"
+                android:layout_margin="@dimen/_7sdp"
+                android:layout_gravity="center"
+                android:id="@+id/ivPanImage"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_add_card"
+                android:layout_height="@dimen/_90sdp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/_8sdp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextPanHolderName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Pan Card Holder Name" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextPanNumber"
+                        android:textAllCaps="true"
+                        android:maxLength="10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="PAN Number" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextDateOfBirth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Date of Birth"
+                        android:clickable="false"
+                        android:focusable="false" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextFixedText"
+                        android:layout_width="match_parent"
+                        android:lines="5"
+                        android:layout_height="wrap_content"
+                        android:text="E-KYC_ANDROID"
+                        android:enabled="false"
+                        android:cursorVisible="false"
+                        android:focusable="false" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:id="@+id/btnVerify"
+                    android:layout_gravity="center"
+                    android:text="VERIFY FOR USER DATA."
+
+                    android:layout_height="wrap_content"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:id="@+id/btnCameraCrop"
+                    android:layout_gravity="center"
+                    android:text="Camera Preview"
+
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:text="IS_PAN_IMAGE_STATUS_200"
+                android:clickable="false"
+                android:id="@+id/chkImage"
+                android:layout_height="wrap_content"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:text="IS_PAN_NUMBER_STATUS_200"
+                android:id="@+id/chkPanNumber"
+                android:clickable="false"
+                android:layout_height="wrap_content"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:text="IS_PAN_IMAGE_STATUS_FAIL"
+                android:clickable="false"
+                android:id="@+id/chkFailImage"
+                android:textColor="@android:color/holo_red_light"
+                android:layout_height="wrap_content"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:textColor="@android:color/holo_red_light"
+
+                android:text="IS_PAN_NUMBER_STATUS_FAIL"
+                android:id="@+id/chkFailPanNumber"
+                android:clickable="false"
+                android:layout_height="wrap_content"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:id="@+id/btnReset"
+                android:layout_gravity="center"
+                android:text="RESET !"
+
+                android:background="@android:color/holo_red_light"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+</LinearLayout>
